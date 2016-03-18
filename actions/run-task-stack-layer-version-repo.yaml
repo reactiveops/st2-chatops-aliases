@@ -25,8 +25,8 @@ parameters:
   timeout:
     description: "timeout"
     type: integer
-    # 20 minutes
-    default: 1200
+    # 25 minutes
+    default: 1500
 
   stack:
     type: string
