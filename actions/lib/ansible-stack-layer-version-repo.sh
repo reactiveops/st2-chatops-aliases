@@ -11,3 +11,5 @@ if [ -z $PLAYBOOK ] ||  [ -z $STACK ] ||  [ -z $LAYER ] ||  [ -z $VERSION ] ||  
   exit 1
 fi
 ansible-playbook $PLAYBOOK -e stack=$STACK -e layer=$LAYER -e version=$VERSION -e app_repo=$APP_REPO | tr '{{' '-'
+
+exit ${PIPESTATUS[0]}
