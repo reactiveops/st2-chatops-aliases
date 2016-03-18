@@ -9,3 +9,5 @@ if [ -z $STACK ] ||  [ -z $LAYER ]; then
 else
   ansible-playbook $PLAYBOOK -e stack=$STACK -e layer=$LAYER | tr '{{' '-'
 fi
+
+exit ${PIPESTATUS[0]}
